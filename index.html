@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10130f" />
+    <meta
+      name="description"
+      content="CyberStrom — a signal is forming. The new experience is coming online."
+    />
+    <title>CyberStrom — Signal Incoming</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Unbounded:wght@500;700&display=swap");
+
+      :root {
+        color-scheme: dark;
+        --ink: #10130f;
+        --paper: #d9dccb;
+        --acid: #d7f64a;
+        --muted: #8c9285;
+        --line: rgba(217, 220, 203, 0.24);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background: var(--ink);
+        color: var(--paper);
+        font-family: "IBM Plex Mono", monospace;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+        opacity: 0.16;
+        background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(0,0,0,.35) 4px);
+      }
+
+      main {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: clamp(1.25rem, 3vw, 2.75rem);
+        isolation: isolate;
+      }
+
+      .storm {
+        position: absolute;
+        width: min(72vw, 920px);
+        aspect-ratio: 1;
+        right: -22vw;
+        top: -28vw;
+        z-index: -1;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background:
+          repeating-radial-gradient(circle, transparent 0 41px, var(--line) 42px 43px),
+          conic-gradient(from 110deg, transparent, rgba(215,246,74,.24), transparent 35%);
+        animation: turn 28s linear infinite;
+      }
+
+      @keyframes turn { to { transform: rotate(360deg); } }
+
+      header, footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: .72rem;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+
+      .brand {
+        font-family: "Unbounded", sans-serif;
+        font-weight: 700;
+        font-size: clamp(.9rem, 2vw, 1.2rem);
+        letter-spacing: -.04em;
+      }
+
+      .status { display: flex; align-items: center; gap: .65rem; }
+      .status::before {
+        content: "";
+        width: .55rem;
+        height: .55rem;
+        border-radius: 50%;
+        background: var(--acid);
+        box-shadow: 0 0 0 .3rem rgba(215,246,74,.1);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse { 50% { opacity: .35; transform: scale(.72); } }
+
+      .hero {
+        align-self: center;
+        max-width: 1100px;
+        padding: 12vh 0 10vh;
+      }
+
+      .eyebrow {
+        margin: 0 0 1.5rem;
+        color: var(--acid);
+        font-size: .76rem;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: rise .7s .1s ease-out forwards;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 12ch;
+        font-family: "Unbounded", sans-serif;
+        font-size: clamp(3.2rem, 10vw, 9.5rem);
+        font-weight: 500;
+        line-height: .84;
+        letter-spacing: -.075em;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: rise .9s .22s cubic-bezier(.2,.8,.2,1) forwards;
+      }
+
+      h1 span { color: var(--acid); }
+
+      .sub {
+        width: min(100%, 34rem);
+        margin: clamp(2rem, 5vw, 4rem) 0 0 clamp(0px, 13vw, 10rem);
+        padding-left: 1rem;
+        border-left: 1px solid var(--acid);
+        color: var(--muted);
+        font-size: clamp(.85rem, 1.5vw, 1rem);
+        line-height: 1.7;
+        opacity: 0;
+        animation: rise .7s .5s ease-out forwards;
+      }
+
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      footer { padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); }
+      .coordinates { color: var(--paper); }
+
+      @media (max-width: 600px) {
+        header { align-items: flex-start; }
+        .hero { padding-block: 16vh 12vh; }
+        .sub { margin-left: 0; }
+        footer { align-items: flex-end; }
+        footer span:last-child { max-width: 12ch; text-align: right; }
+        .storm { width: 130vw; right: -75vw; top: -20vw; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; }
+        .eyebrow, h1, .sub { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="storm" aria-hidden="true"></div>
+      <header>
+        <div class="brand">CyberStrom</div>
+        <div class="status">Signal active</div>
+      </header>
+
+      <section class="hero" aria-labelledby="headline">
+        <p class="eyebrow">Transmission 001 / September 2026</p>
+        <h1 id="headline">The storm is <span>forming.</span></h1>
+        <p class="sub">
+          Something electric is gathering beyond the horizon. Systems are
+          syncing. The new CyberStrom experience is coming online.
+        </p>
+      </section>
+
+      <footer>
+        <span class="coordinates">50.1109° N / 8.6821° E</span>
+        <span>Stand by for transmission</span>
+      </footer>
+    </main>
+  </body>
+</html>
