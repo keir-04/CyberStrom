@@ -135,6 +135,12 @@
         .event-logo-tile > div:first-child {
             height: 100%;
             margin: 0;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .event-logo:not(.hidden) ~ svg {
+            display: none;
         }
 
         .event-logo-tile > h3,
@@ -217,6 +223,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('b2r')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('b2r')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/BootToRoot.jpeg" alt="Boot-to-Root event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">Boot-to-Root</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">1. Boot-to-Root (B2R) Challenge</h3>
@@ -229,6 +236,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('release_rush')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('release_rush')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/ReleaseRush.jpeg" alt="Release Rush event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">Release Rush</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">2. Release Rush</h3>
@@ -241,6 +249,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('cryptex')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('cryptex')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/Cryptex.jpeg" alt="CRYPTEX event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">CRYPTEX</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">3. CRYPTEX</h3>
@@ -253,6 +262,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('cyber_crest')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('cyber_crest')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/CyberCrest.jpeg" alt="Cyber Crest event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">Cyber Crest</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">4. Cyber Crest</h3>
@@ -265,6 +275,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('cyber_debug')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('cyber_debug')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/Cyberdebug.jpeg" alt="Cyber Debug event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">Cyber Debug</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">5. Cyber Debug</h3>
@@ -277,6 +288,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('cyber_treasure')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('cyber_treasure')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/Cyber Treasurehunt.jpeg" alt="Cyber Treasure Hunt event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">Treasure Hunt</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">6. Cyber Treasure Hunt</h3>
@@ -289,6 +301,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('geoguesser')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('geoguesser')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/GeoGuesser.jpeg" alt="GeoGuesser event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">GeoGuesser</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">7. GeoGuesser</h3>
@@ -301,6 +314,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('hackiq')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('hackiq')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/HackIQ.jpeg" alt="HackIQ event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">HackIQ</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">8. HackIQ</h3>
@@ -313,6 +327,7 @@
             <div class="event-logo-tile" role="button" tabindex="0" onclick="openModal('devicex')" onkeydown="if (event.key === 'Enter' || event.key === ' ') openModal('devicex')">
                 <div class="mb-4 h-28 flex items-center justify-center text-cyber-green">
                     <img class="event-logo hidden h-full w-full object-contain" src="event-logos/DeviceX.jpeg" alt="Device X event logo" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden')">
+                    <span class="text-center font-mono text-xs uppercase tracking-widest text-cyber-green">Device X</span>
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-cyber-green transition-colors">9. Device X</h3>
