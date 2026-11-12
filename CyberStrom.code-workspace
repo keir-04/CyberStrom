@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../Downloads/event-logos"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CyberStrom"
+	}
+}
